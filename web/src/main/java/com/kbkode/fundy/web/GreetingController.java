@@ -1,4 +1,4 @@
-package com.kbkode.fundy;
+package com.kbkode.fundy.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

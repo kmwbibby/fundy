@@ -1,4 +1,4 @@
-package com.kbkode.fundy;
+package com.kbkode.fundy.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

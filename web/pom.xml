@@ -3,24 +3,26 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
+        <groupId>com.kbkode</groupId>
+        <artifactId>fundy</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>    
     
-    <groupId>com.kbkode</groupId>
-    <artifactId>fundy</artifactId>
+    <artifactId>web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>fundy</name>
-    <packaging>pom</packaging>
-    
-    <description>Fundy Project</description>
+
+    <name>web</name>
+    <description>Fundy Web Application</description>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
-    
+
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -49,11 +51,20 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>com.kbkode</groupId>
+            <artifactId>security</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
-    
-    <modules>
-        <module>web</module>
-        <module>security</module>
-        <module>jpa</module>
-    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
